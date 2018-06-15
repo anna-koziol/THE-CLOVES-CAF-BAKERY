@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+}
+
+#contentMain {
+    height: 100vh;
+    background-image: url('../graphics/petr-sevcovic-594807-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#content>p, #more>p, #menuDiv>p {
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    padding: 10px;
+    font-size: 300%;
+    margin: 7vh;
+    color: white;
+}
+
+button {
+    padding: 15px;
+    width: 15%;
+    background-color: rgb(0, 128, 128);
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    border-radius: 4px;
+    min-width: 150px;
+    min-height: 50px;
+}
+
+button:hover {
+    background-color: rgb(1, 110, 110);
+    transition: 2s;
+}
+
+#arrow {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow>img {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    height: 2vh;
+    width: 5vw;
+    margin-top: 5vh;
+    min-width: 50px;
+}
+
+#more {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    text-align: center;
+    background-color: rgb(124, 122, 122);
+    height: 300vh;
+    display: none;
+    margin-top: 0vh;
+    animation-name: scrollingUp;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    opacity: 1;
+}
+
+.informations {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30vh;
+}
+
+.informations:first-of-type {
+    margin-top: 40vh;
+}
+
+.informationsColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.imgContenet {
+    width: 40vw;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-top: -50vh;
+}
+
+#hr {
+    width: 15vw;
+    height: 3px;
+    border-bottom: 3px solid black;
+    margin: 5vw;
+}
+
+#menuDiv {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    text-align: center;
+    background-color: rgb(175, 175, 175);
+    height: 150vh;
+    animation-name: scrollingUp;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    margin-top: 0vh;
+}
+
+#footer>img {
+    width: 40vw;
+    height: auto;
+}
+
+.animation {
+    animation-name: scrolling;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+}
+
+.animationDown {
+    animation-name: scrollingDown !important;
+    animation-timing-function: ease-out !important;
+    animation-duration: 1s !important;
+}
+
+.animationOpacity {
+    animation-name: opacity !important;
+    animation-timing-function: ease-out !important;
+    animation-duration: 1s !important;
+}
+
+@media only screen and (max-width: 680px) {
+    #content>p {
+        font-size: 150%;
+    }
+}
+
+@keyframes scrolling {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-bottom: 200vh;
+    }
+}
+
+@keyframes scrollingUp {
+    from {
+        margin-top: 0vh;
+    }
+    to {
+        margin-bottom: -100vh;
+    }
+}
+
+@keyframes scrollingDown {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1 !important;
+    }
+}
